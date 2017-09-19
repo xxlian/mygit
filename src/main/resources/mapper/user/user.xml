@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.topideal.qindc.mygit.dao.UserDao">
+	
+	<select id="login" resultType="com.topideal.qindc.mygit.po.User">
+		select username, password from user 
+		where username = #{username} and password = #{password}
+	</select>
+	
+	<select id="getUserById" resultType="com.topideal.qindc.mygit.po.User">
+		select username, password from user 
+		where id = #{id}
+	</select>
+	
+	
+</mapper>
